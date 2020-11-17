@@ -1,0 +1,228 @@
+/* ------------RESETS------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  font-style: none;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------GLOBAL------------------ */
+
+:root {
+  --accent: rgb(0, 120, 215);
+  --accent-light: rgb(51, 163, 255);
+  --accent-dark: rgb(0, 56, 102);
+  --header: rgb(0, 0, 0);
+  --light-text: rgb(255, 255, 255);
+  --aside: rgb(54, 65, 71);
+  --aside-accent: rgb(42, 50, 55);
+  --aside-accent-light: rgb(67, 79, 86);
+  --delete: rgb(90, 21, 2);
+  --delete-light: rgb(199, 47, 5);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: 40px auto;
+  grid-template-columns: 250px auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ------------HEADER------------------ */
+
+header {
+  grid-column: 1 / span 2;
+  background: var(--header);
+  color: var(--light-text);
+}
+
+.header-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-template-rows: 1fr;
+}
+
+.logo {
+  background: var(--accent);
+  font-size: 1rem;
+  display: grid;
+  place-content: center;
+  padding-right: 2px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+/* ------------ASIDE------------------- */
+
+aside {
+  background: var(--aside);
+  color: var(--light-text);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.toolbar-button {
+  background: none;
+  border: none;
+  color: var(--light-text);
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.toolbar-button:hover {
+  cursor: pointer;
+  background: var(--aside-accent);
+}
+
+.toolbar-button i {
+  margin-right: 2rem;
+}
+
+.projects {
+  border-top: 2px solid var(--aside-accent-light);
+  padding: 1rem;
+}
+
+.project {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 1rem;
+}
+
+.project a {
+  color: var(--light-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: none;
+}
+
+.project-title {
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.project-delete {
+  background: none;
+  border: none;
+  color: var(--light-text);
+  font-size: 1rem;
+}
+
+.project-delete:hover {
+  cursor: pointer;
+  color: var(--delete-light);
+}
+
+.delete-all-projects:hover {
+  background: var(--delete);
+}
+
+/* ------------MAIN-------------------- */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+/* ------------TASKS-TOP--------------- */
+
+.project-top {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, auto);
+  align-items: center;
+  padding: 0.6rem;
+}
+
+.task-list-button {
+  border: 2px solid var(--accent-light);
+  background: none;
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.task-list-button:hover {
+  border: 2px solid var(--accent);
+  cursor: pointer;
+}
+
+.clear-tasks:hover {
+  border: 2px solid var(--delete-light);
+}
+
+/* ------------TASKS------------------ */
+
+.task-table {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+/* Task headers */
+
+.task {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+}
+
+.task-name {
+  font-size: 1rem;
+}
+
+/* ------------MODAL----------------- */
+
+.modal-wrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.add-project-modal {
+  background: var(--aside);
+  color: var(--light-text);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}

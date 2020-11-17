@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1d6c46e2fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <div class="header-wrapper">
+          <div class="logo"><i class="fas fa-2x fa-tasks"></i></div>
+          <h1 class="title">ToDo</h1>
+        </div>
+      </header>
+      <aside>
+        <div class="upper-toolbar">
+          <button class="toolbar-button add-project">
+            <i class="add-icon fas fa-plus"></i>Add Project
+          </button>
+        </div>
+        <div class="projects">
+          <ul class="projects-list">
+            <li class="project">
+              <a href="#"
+                ><i class="project-icon fas fa-project-diagram"></i>
+                <h3 class="project-title">Name One</h3></a
+              >
+
+              <button class="project-delete"><i class="fas fa-times"></i></button>
+            </li>
+            <li class="project">
+              <a href="#"
+                ><i class="project-icon fas fa-project-diagram"></i>
+                <h3 class="project-title">Name Two</h3></a
+              >
+
+              <button class="project-delete"><i class="fas fa-times"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div class="lower-toolbar">
+          <button class="toolbar-button delete-all-projects">
+            <i class="fas fa-times"></i>Delete All Projects
+          </button>
+        </div>
+      </aside>
+      <main>
+        <div class="project-top">
+          <h3 class="task-list-title">Title</h3>
+          <button class="task-list-button add-task">Add Task</button>
+          <button class="task-list-button all-done">Mark All Done</button>
+          <button class="task-list-button clear-tasks">Delete All</button>
+        </div>
+        <div class="task-table">
+          <!-- <div class="task-headers">
+            <h4 class="th-done">Done</h4>
+            <h4 class="priority">Priority</h4>
+            <h4 class="th-name">Name</h4>
+            <h4 class="th-note">Note</h4>
+            <h4 class="due">Due</h4>
+          </div> -->
+          <div class="task-list">
+            <div class="task" data-id="123test">
+              <input class="task-done" type="checkbox" name="done" />
+              <p class="task-priority">3/5</p>
+              <h5 class="task-name">Coffe</h5>
+              <p class="task-note">Go out with K to cafe</p>
+              <p class="task-due">23.10.2020r.</p>
+            </div>
+            <div class="task" data-id="123test">
+              <input class="task-done" type="checkbox" name="done" />
+              <p class="task-priority">3/5</p>
+              <h5 class="task-name">Coffe</h5>
+              <p class="task-note">Go out with K to cafe</p>
+              <p class="task-due">23.10.2020r.</p>
+            </div>
+            <div class="task" data-id="123test">
+              <input class="task-done" type="checkbox" name="done" />
+              <p class="task-priority">3/5</p>
+              <h5 class="task-name">Coffe</h5>
+              <p class="task-note">Go out with K to cafe</p>
+              <p class="task-due">23.10.2020r.</p>
+            </div>
+            <div class="task" data-id="123test">
+              <input class="task-done" type="checkbox" name="done" />
+              <p class="task-priority">3/5</p>
+              <h5 class="task-name">Coffe</h5>
+              <p class="task-note">Go out with K to cafe</p>
+              <p class="task-due">23.10.2020r.</p>
+            </div>
+            <div class="task" data-id="123test">
+              <input class="task-done" type="checkbox" name="done" />
+              <p class="task-priority">3/5</p>
+              <h5 class="task-name">Coffe</h5>
+              <p class="task-note">Go out with K to cafe</p>
+              <p class="task-due">23.10.2020r.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
